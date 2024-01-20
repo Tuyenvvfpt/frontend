@@ -1,0 +1,154 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444444;
+}
+
+h1,
+h2,
+h3 {
+  /* color: rgba(123, 123, 12, 0.7); */
+  color: #10ad35;
+}
+
+h1 {
+  /* font-size: 26px; */
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  font-style: italic;
+  /* color: #10ad35; */
+}
+
+h2 {
+  /* font-size: 40px; */
+  /* font-family: sans-serif; */
+  color: rgba(123, 123, 12, 0.7);
+}
+
+h3 {
+  /* font-size: 30px; */
+  /* font-family: sans-serif; */
+}
+
+h4 {
+  /* font-size: 20px; */
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  /* color: red; */
+  /* font-size: 22px; */
+  /* font-family: sans-serif; */
+  line-height: 1.5;
+}
+
+li {
+  /* font-size: 20px; */
+  /* font-family: sans-serif; */
+}
+
+footer p {
+  color: aqua;
+  font-size: 16px;
+}
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related {
+  list-style: none;
+}
+
+header {
+  background-color: #a56868;
+}
+
+.main-header {
+  /* đây là màu xám */
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f8f8;
+  border-top: 5px dashed #10ad35;
+  border-bottom: 5px dotted #10ad35;
+
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  /* in đậm dòng đầu tiên trong list */
+  font-weight: bold;
+}
+
+li:last-child {
+  color: rgba(251, 3, 255, 0.7);
+}
+
+li:nth-child(2) {
+  color: chocolate;
+}
+
+li:nth-child(even) {
+  color: aqua;
+}
+
+
+/* Misconception: this won't work! */
+article p:last-child {
+  color: pink;
+}
+
+article p:first-child {
+  color: rgb(15, 13, 130);
+}
+
+/* chỉ nhắm thuộc tính a có link */
+a:link {
+  color: #00ff3c;
+  text-decoration: none;
+}
+
+a:visited {
+  /* chỉ link nào đã được sử dụng */
+  color: #00ff3c; 
+}
+
+a:hover {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline wavy red;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
