@@ -1,15 +1,75 @@
 * {
   /* border-top: 10px solid rgb(170, 170, 170); */
+  margin: 0;
+  padding: 0;
 }
 
+/* PAGE SECTION */
 body {
   /* phần muốn tất cả trên trang đều có */
   font-family: sans-serif;
   color: #444444;
 
   border-top: 10px solid rgba(123, 123, 12, 0.7);
+
+  position: relative;
+
 }
 
+.container {
+  width: 800px;
+  /* tự căn giữa */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+
+  /* position tính theo relative đầu tiên */
+  position: relative;
+}
+
+.main-header {
+  /* đây là màu xám */
+  background-color: #f7f7f7;
+  /* box model */
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  /* nên sử dụng */
+  margin-bottom: 60px;
+
+  /* height: 80px; */
+}
+
+/* nav a:link, nav p {
+  font-size: 20px;
+} */
+
+nav {
+  font-size: 20px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post_header {
+  margin-bottom: 40px;
+
+  position: relative;
+}
+
+aside {
+  background-color: #f8f8;
+  border-top: 5px dashed #10ad35;
+  border-bottom: 5px dotted #10ad35;
+
+  padding: 50px 0px;
+
+  width: 500px;
+}
+
+/* SMALLER ELEMENT */
 /* h1,
 h2,
 h3,
@@ -39,11 +99,15 @@ h2 {
   /* font-size: 40px; */
   /* font-family: sans-serif; */
   color: rgba(123, 123, 12, 0.7);
+
+  margin-bottom: 30px;
 }
 
 h3 {
-  /* font-size: 30px; */
+  font-size: 30px;
   /* font-family: sans-serif; */
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 h4 {
@@ -58,11 +122,28 @@ p {
   font-size: 15px;
   /* font-family: sans-serif; */
   line-height: 1.5;
+
+  margin-bottom: 15px;
+
+  /* display: inline; */
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 li {
-  /* font-size: 20px; */
+  font-size: 20px;
   /* font-family: sans-serif; */
+  margin-bottom: 30px;
+
+  /* display: inline; */
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 footer p {
@@ -97,20 +178,10 @@ footer p {
 }
 
 header {
-  background-color: #a56868;
+  /* background-color: #a56868; */
 }
 
-.main-header {
-  /* đây là màu xám */
-  background-color: #f7f7f7;
-}
 
-aside {
-  background-color: #f8f8;
-  border-top: 5px dashed #10ad35;
-  border-bottom: 5px dotted #10ad35;
-
-}
 
 /* .first-li {
   font-weight: bold;
@@ -165,6 +236,80 @@ a:active {
   font-style: italic;
 }
 
+.post_image {
+  /* 1 cái setup, cái còn lại để auto tự fix */
+  /* width: 800px;
+  height: auto; */
+
+  /* 100% ăn theo class cha */
+  width: 100%;
+  height: auto;
+
+  /* margin: 100px; */
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;;
+
+  display: block; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+  font-weight: bold;
+  color: red;
+}
+
+h3 + p::first-line {
+  /* color: red; */
+}
+
+h2 {
+  background-color: orange;
+  /* display: inline-block; */
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+
+  /* position */
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
 /* 
 resolving conflicts 
 1. inline 
@@ -174,7 +319,7 @@ resolving conflicts
 */
 
 #copyright {
-  color: red;
+  color: blue;
 }
 
 .copyright {
@@ -187,13 +332,4 @@ resolving conflicts
 
 footer p {
   color: orange;
-}
-
-
-/* nav a:link, nav p {
-  font-size: 20px;
-} */
-
-nav {
-  font-size: 20px;
 }
