@@ -3,6 +3,7 @@
     margin: 50px auto;
     border: 5px solid black;
     position: relative;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -14,6 +15,9 @@ h2 {
     font-size: 22px;
     margin-top: 0;
     margin-bottom: 0;
+
+    /* position: relative; */
+
 }
 
 .sale {
@@ -28,6 +32,10 @@ h2 {
     position: absolute;
     top: -30px;
     left: -30px;
+
+    /* top: 0px;
+    left: 230px; */
+
     letter-spacing: 3px;
 }
 
@@ -90,6 +98,8 @@ li {
     font-weight: bold;
     font-size: 25px;
 
+    float: left;
+
 }
 
 .fee_shipping {
@@ -98,14 +108,20 @@ li {
     font-size: 13px;
     color: #aca6a6;
     text-transform: uppercase;
+
+    float: right;
+    margin-top: 10px;
 }
 
 .description {
     font-size: 15px;
     font-weight: bold;
 
-    margin-top: 20px;
-    margin-bottom: 0px;
+
+    clear: both;
+    margin-top: 70px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -113,11 +129,12 @@ a {
 }
 
 /* chỉ nhắm thuộc tính a có link */
-a:link, a:visited {
+a:link,
+a:visited {
     color: black;
     /* text-decoration: none; */
 
-    margin-bottom: 40px ;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
@@ -137,7 +154,7 @@ a:active {
     font-size: 17px;
     font-weight: 750;
 
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 button {
@@ -159,5 +176,36 @@ button:hover {
 
 .list_detail {
     list-style: square;
-    margin-left: 1px;
+    /* margin-left: 1px; */
+
+    margin-left: 0px;
+    padding-left: 15px;
+}
+
+.img {
+    float: left;
+    width: 245px;
+    margin-right: 35px;
+}
+
+.price {
+    float: left;
+    width: 250px;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
+.detail {
+    /* margin-top: 20px; */
+    float: right;
+    width: 240px;
+    margin-right: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+li:last-child {
+    margin-bottom: 0px;
 }
