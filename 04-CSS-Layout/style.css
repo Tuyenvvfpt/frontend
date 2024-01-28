@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 /* PAGE SECTIONS */
@@ -12,6 +13,8 @@ body {
 
   border-top: 10px solid #1098ad;
   position: relative;
+
+
 }
 
 .container {
@@ -19,6 +22,11 @@ body {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
+
+  /* display: flex; */
+  margin: 0 auto;
+
+  /* display: flex; */
 }
 
 .main-header {
@@ -205,7 +213,7 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -276,57 +284,116 @@ nav p {
 
 
 /* FLOATS */
-.author-img {
+
+/* .author-img {
   float: left;
   margin-bottom: 20px;
-}
+} */
 
-.author {
-  /* nếu padding 50px sẽ không có tác dụng, \
+/* nếu padding 50px sẽ không có tác dụng,
   vì img không ảnh hưởng yếu tố xung quanh */
-  /* padding-left: 80px; */
-
+/* padding-left: 80px; */
+/* .author {
   margin: 10px;
   margin-left: 20px;
   float: left;
-}
+} */
 
-h1 {
+/* h1 {
   float: left;
   margin-right: 20px;
 }
 
 nav {
   float: right;
-}
+} */
 
 /* .clear {
   clear: both;
 } */
 
-.clearfix::after {
+/* .clearfix::after {
   clear: both;
   content: "";
   display: block;
 }
 
-article {
   /* background-color: green; */
-  /* vì container 1200px */
+/* vì container 1200px */
+/* article {
   width: 825px;
-
   float: left;
-  ;
+} */
+
+/* background-color: red; */
+/* aside {
+  width: 300px;
+  float: right;
+} */
+
+/* background-color: yellow; */
+/* footer {
+  clear: both;
+} */
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.related-author {
+  margin-bottom: 0px;
+  font-size: 14p;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+
+  margin-bottom: 60px;
+  /* background-color: red; */
+}
+
+article {
+  /* flex: 0 0 825px; */
+  flex: 1;
+  
+  margin-bottom: 0;
 }
 
 aside {
-  /* background-color: red; */
-  width: 300px;
-
-  float: right;
-}
-
-footer {
-  /* background-color: yellow; */
-  clear: both;
+  /* flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 300px; */
+  flex: 0 0 300px;
 }
