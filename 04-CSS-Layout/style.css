@@ -35,8 +35,10 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
   /* height: 80px; */
+
+  /* CSS Grid */
+  /* margin-bottom: 60px; */
 }
 
 nav {
@@ -337,7 +339,7 @@ nav {
 } */
 
 /* FLEXBOX */
-.main-header {
+/* .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -373,27 +375,51 @@ nav {
   font-style: normal;
   margin-bottom: 5px;
   display: block;
-}
+} */
 
-.row {
+/* background-color: red; */
+/* .row {
   display: flex;
   align-items: flex-start;
   gap: 75px;
 
   margin-bottom: 60px;
-  /* background-color: red; */
-}
+} */
 
-article {
-  /* flex: 0 0 825px; */
+/* flex: 0 0 825px; */
+/* article {
   flex: 1;
-  
-  margin-bottom: 0;
-}
 
-aside {
-  /* flex-grow: 0;
+  margin-bottom: 0;
+} */
+
+/* flex-grow: 0;
   flex-shrink: 1;
   flex-basis: 300px; */
+/* aside {
   flex: 0 0 300px;
+} */
+
+/* CSS Grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: center;
+}
+
+.main-header {
+  /* grid-column: 1/span 2; */
+  grid-column: 1/-1;
+}
+
+article {}
+
+aside {}
+
+footer {
+  background-color: #1098ad;
+  grid-column: 1/-1;
 }
