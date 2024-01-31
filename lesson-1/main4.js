@@ -56,7 +56,7 @@
 // }
 // writeArguments("q", "w", "e", "r", "t", "y");
 
-//4 important
+//4 IMPORTANT
 function writeArray() {
     var myString = "";
     for (var param of arguments) {
@@ -90,7 +90,7 @@ writeArray("q", "w", "e", "r", "t", "y", 1, 2, 3);
 /* 
 Các loại function
 1. declare function
-hosting: có thể gọi trước khi được định nghĩa
+HOSTING: có thể gọi trước khi được định nghĩa
 2. expression function
 3. arrow function
 */
