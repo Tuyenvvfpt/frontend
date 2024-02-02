@@ -17,22 +17,24 @@ logical and if
 */
 var c = 2;
 
-// var result = "A" && "B" && "C";
-// console.log(result);
-
-// var conclusion = null && "B" && "C";
-// if (conclusion) {
-//     console.log("dieu kien dung");
-// } else {
-//     console.log("dieu kien sai");
-// }
-
-var result2 = "A" || "B" || "C";
-console.log(result2);
-
-var conclusion2 = null || "B" || "C";
-if (conclusion2) {
+console.warn("&&")
+var result = "A" && "B" && "C";
+console.log(result); //C
+var conclusion = null && "B" && "C";
+console.log(conclusion); //null
+if (conclusion) {
     console.log("dieu kien dung");
+} else {
+    console.log("dieu kien sai"); //dkien sai
+}
+
+console.warn("||")
+var result2 = "A" || "B" || "C";
+console.log(result2); //A
+var conclusion2 = null || "B" || "C";
+console.log(conclusion2) //B
+if (conclusion2) {
+    console.log("dieu kien dung"); //dkien dung
 } else {
     console.log("dieu kien sai");
 }

@@ -38,10 +38,11 @@
 // }
 // writeLog("hello");
 
-// function writeType(message) {
-//     console.log(typeof message);
-// }
-// writeType(["array1, array2"]);
+console.warn("paramenter:...")
+function writeType(message) {
+    console.log(typeof message);
+}
+writeType(["array1, array2"]); //object
 
 //2
 // function writeJob(message1, mess2) {

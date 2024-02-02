@@ -56,7 +56,7 @@ var isSuccess = true;
 /* e. Toán tử chuỗi - String operator */
 var firstName = "Tuyen"
 var lastName = "Vu";
-// nếu 1 trong 2 kp là chuỗi nó sẽ thành toán tử nối chuỗi
+// nếu 1 trong 2 là chuỗi nó sẽ thành toán tử nối chuỗi
 // console.log(firstName + " " + lastName);
 
 // fullName = fullName + " Nam Dinh";
@@ -138,12 +138,12 @@ giảm 1 giá trị số --
 /* prompt */
 // prompt("Xac nhan va dien so tuoi cua ban: ");
 
-/* set timeout */
+/* set timeout: nếu bạn muốn hàm của mình thực thi bao nhiêu mili giây kể từ khi gọi method setTimeout() */
 // setTimeout(function () {
 //     alert("Thong bao timeout");
 // }, 5000)
 
-/* set interval */
+/* set interval: thiết lập độ trễ cho các hàm sẽ được thực hiện lặp lại như là hiệu ứng */
 // setInterval(function () {
 //     console.log("Thong bao interval: " + Math.random());
 // }, 3000)
