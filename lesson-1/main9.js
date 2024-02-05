@@ -25,7 +25,8 @@ switch (date) {
         console.log("khong biet");
 }
 
-/* toán tử 3 ngôi - ternary operator
+/* toán tử 3 ngôi - 
+
 
 */
 
