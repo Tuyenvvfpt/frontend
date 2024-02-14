@@ -1,4 +1,4 @@
-/* Object trong Javascripr  */
+/* Object trong Javascript  */
 console.warn("Object")
 var emailKey = "emailEdu";
 var myInfor = {
@@ -16,8 +16,8 @@ console.log(myInfor);
 myInfor.email = "vunhatvinh2006@gmail.com";
 myInfor["phoneNumber"] = "0979829073";
 
-console.log(myInfor.name);
-console.log(myInfor["name"]);
+console.log(myInfor.name); //Vu Van Tuyen
+console.log(myInfor["name"]); //Vu Van Tuyen
 
 var myKey = "address"
 console.log(myInfor[myKey]); //Nam Dinh
@@ -25,12 +25,12 @@ console.log(myInfor[myKey]); //Nam Dinh
 delete myInfor.email;
 console.log(myInfor);
 
-console.log(myInfor.getName()); //function
+console.log(myInfor.getName()); //Vu Van Tuyen - function
 
 // Function : Phuong thuc / Method
 // Others :  Thuoc tinh / Property 
 console.warn("check type:...")
-console.log(typeof phoneNumber); //undefined
+console.log(typeof phoneNumber); //(key -) undefined
 
 /* Object Constructor */
 console.warn("Object Constructor")
@@ -65,17 +65,19 @@ console.log(admin);
 
 console.log(admin.getName());
 
-/* Object prototype - Basic
+/* OBJECT PROTOTYPE - Basic
 1. La gi?
 2. Su dung khi nao */
 console.warn("Object Prototype");
 
 User1.prototype.className = "F8";
-console.log(author);
+console.log(author.className); //F8
+console.log(admin.className); //F8
 
 User1.prototype.getClassName = function () {
     return this.className;
-}
+}; //trong tag Prototype
+console.log(admin.getClassName()); //F8
 
 /* ĐỐI TƯỢNG DATE
 Search: Javascript Date Object Mozilla */
@@ -86,7 +88,8 @@ var date2 = Date();
 console.log(typeof date); //object
 console.log(typeof date2); //string
 
-console.log("Today is: " + date);
+console.log("Today is: " + date); 
+//Today is: Wed Feb 14 2024 07:20:16 GMT+0700 (Indochina Time)
 
 var year = date.getFullYear();
 console.log("Year is: " + year);
@@ -97,5 +100,6 @@ console.log("Month is: " + month + 1);
 var day = date.getDate();
 console.log("Day is: " + day);
 
-console.log(`${day}/${month}/${year}`);
+console.log(`${day}/${month}/${year}`); //14/1/2024
+
 

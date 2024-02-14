@@ -6,7 +6,7 @@
 
 */
 
-var date = 0;
+var date = 6;
 
 switch (date) {
     case 1:
@@ -36,7 +36,8 @@ var course = {
 }
 
 if (course.coin > 0) {
-    console.log(`${course.coin} coins`);
+    console.log(`${course.coin} coins`); //250 coins
+    console.log(course.coin + " coins"); //250 coins
 } else {
     console.log("mien phi");
 }

@@ -33,21 +33,25 @@ console.warn("Làm việc với chuỗi");
 var myString = "Hoc JS tai F8 JS!";
 //1. length
 //2. find index
-console.log(myString.indexOf("JS"));
-console.log(myString.indexOf("JS", 5)); //bat dau tim tu index = 5
-console.log(myString.lastIndexOf("JS"));
+console.log(myString.indexOf("JS")); //4
+console.log(myString.indexOf("JS", 5)); //14 - bat dau tim tu index = 5
+console.log(myString.lastIndexOf("JS")); //14
 
-console.log(myString.search("JS")); //KO thể chỉ định vị trí bắt đầu
+console.log(myString.search("JS")); //4 - KO thể chỉ định vị trí bắt đầu
 //hỗ trợ biểu thức chính quy
 
 //3. cut string
-console.log(myString.slice(4, 6));
-console.log(myString.slice(-6, -4));
-console.log(myString.slice(-3));
+console.log(myString.slice(4, 6)); //JS
+console.log(myString.slice(-6, -4)); //F8
+console.log(myString.slice(-3)); //JS!
 
 //4. replace
 console.warn("replace. Học biểu thức chính quy");
-console.log(myString.replace(/JS/g, "Javascript"));
+console.log(myString.replace(/JS/g, "Javascript")); //"Hoc JS tai F8 JS!
+// => Hoc Javascript tai F8 Javascript!
+console.log(myString.replace("JS", "ok")); //chỉ thay thế element đầu tiên
+// => Hoc ok tai F8 JS!
+
 
 //5. uppercase
 console.log(myString.toUpperCase());
@@ -56,8 +60,8 @@ console.log(myString.toUpperCase());
 //7. trim
 console.warn("trim");
 var string = "   Vu Tuyen  ";
-console.log(string.length);
-console.log(string.trim().length);
+console.log(string.length); //13
+console.log(string.trim().length); //8
 
 //8. split
 var languages = "php, ok, ruby";

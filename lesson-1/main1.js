@@ -138,12 +138,12 @@ giảm 1 giá trị số --
 /* prompt */
 // prompt("Xac nhan va dien so tuoi cua ban: ");
 
-/* set timeout: nếu bạn muốn hàm của mình thực thi bao nhiêu mili giây kể từ khi gọi method setTimeout() */
+/* set timeout: nếu bạn muốn hàm của mình ĐƯỢC THỰC THI SAU BAO NHIÊU MILI GIÂY kể từ khi gọi method setTimeout() */
 // setTimeout(function () {
 //     alert("Thong bao timeout");
 // }, 5000)
 
-/* set interval: thiết lập độ trễ cho các hàm sẽ được thực hiện lặp lại như là hiệu ứng */
+/* set interval: thiết lập độ trễ cho các hàm sẽ được thực hiện LẶP LẠI như là hiệu ứng */
 // setInterval(function () {
 //     console.log("Thong bao interval: " + Math.random());
 // }, 3000)

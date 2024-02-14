@@ -43,11 +43,12 @@ console.log(id1 == id2); //false
 
 
 //function 
-var myFunction = function () {
+var myFunctionTest = function () {
     alert("Xin chao cac ban");
 }
 
-myFunction();
+myFunctionTest();
+
 //object types
 var myObject = {
     name: "Tuyen Van Vu",
@@ -58,7 +59,7 @@ var myObject = {
     }
 };
 
-console.log("myObject", myObject);
+console.log("myObject: ", myObject);
 
 var myArray = ['javascript', 'php', 'ruby'];
 console.log(myArray);

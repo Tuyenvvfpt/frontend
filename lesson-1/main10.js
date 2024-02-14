@@ -83,12 +83,12 @@ do {
 
 /* break & continue */
 console.warn("break and continue")
-// for (var a = 0; a < 10; a++) {
-//     if (a = 2) continue;
-//     if (a = 8) break;
-//     console.log(a);
-//     a++;
-// }
+for (var a = 0; a < 10; a++) {
+    if (a % 2== 0) continue;
+    // if (a = 8) break;
+    console.log(a);
+    a++;
+}
 
 /* nested loop - vong lap long nhau */
 console.warn("nested loop")
