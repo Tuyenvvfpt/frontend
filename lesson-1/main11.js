@@ -121,14 +121,11 @@ console.log(newCourses);
 function courseNameHandler(course) {
     return `<h2> ${course.name} </h2>`;
 }
-
 var newCoursesName = courses.map(courseNameHandler);
 //tao ra Array moi co SO LUONG PHAN TU = SO LUONG PHAN TU ARRAY BAN DAU
 console.log(newCoursesName.join(''));
 //<h2> Javascript </h2><h2> HTML, CSS 
 //</h2><h2> Ruby </h2><h2> PHP </h2><h2> ReactJS </h2><h2> Ruby </h2>
-
-
 //---------------------------------------------------------------------------------------
 console.warn("reduce");
 //1. Dễ hiểu:
@@ -139,6 +136,8 @@ for (var course of courses) { //Lặp qua các phần tử
     totalCoin += course.coin; //Thực hiện lưu trữ
 }
 console.log(totalCoin);
+
+
 var i = 0;
 function sumCoinHandler(accumulator, currentValue, currentIndex, originArray) {
     // i++;
@@ -155,12 +154,12 @@ function sumCoinHandler(accumulator, currentValue, currentIndex, originArray) {
     return total;
 }
 var sumCoin = courses.reduce(sumCoinHandler, 0);
-console.log(sumCoin);
+console.log("sumCoin: ", sumCoin); //738
 
 var totalCoinOfCourse = courses.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.coin;
 }, 0); //gia tri khoi tao bang 0 - initial value
-console.log(totalCoinOfCourse);
+console.log("sumCoin: ", totalCoinOfCourse); //738
 
 var numbers = [100, 200, 220, 200, 480];
 var totalNumber = numbers.reduce(function (total, number) {
@@ -172,7 +171,7 @@ console.log(totalNumber);
 var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
 
 var flatArray = depthArray.reduce(function (flatOutput, depthItem) {
-    return flatOutput.concat(depthItem);
+    return flatOutput.concat(depthItem); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
 }, []);
 console.log(flatArray)
 //Lấy ra các khóa học đưa vào 1 mảng mới
@@ -207,7 +206,7 @@ var topics = [
 var newCoursesss = topics.reduce(function (courses, topic) {
     return courses.concat(topic.courses);
 }, []);
-console.log(newCoursesss);
+console.log("newCourses: ",newCoursesss);
 
 var htmls = newCoursesss.map(function (course) {
     return `

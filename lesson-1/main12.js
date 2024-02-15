@@ -9,7 +9,10 @@ là hàm được truyền qua đối số khi gọi hàm khác
 function myFunction(param) {
     // console.log(param);
     // console.log(typeof param);
-    param("Hoc lap trinh");
+
+    if (typeof param === "function") { //phai check function
+        param("Hoc lap trinh");
+    }
 };
 // myFunction("hoc Javascript");
 //-----
@@ -18,4 +21,4 @@ function myCallback(value) {
 };
 // myCallback(123);
 
-myFunction(myCallback);
+myFunction(myCallback); //value: Hoc lap trinh

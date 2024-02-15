@@ -99,6 +99,7 @@ function calculateRating(watchList) {
     var imdbs = directors.reduce(function (imdb, rating) {
         return imdb + Number(rating.imdbRating);
     }, 0);
+    
     return imdbs / directors.length;
 }
 
