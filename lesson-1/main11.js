@@ -99,7 +99,7 @@ function getMostFavoriteSport(arr) {
 
 // Kỳ vọng
 console.log(getMostFavoriteSport(sports));
-//---------------------------------------
+//---------------------------------------------------------------------------------------
 
 console.warn("map");
 function courseHandler(course, index, originArray) {
@@ -127,6 +127,9 @@ var newCoursesName = courses.map(courseNameHandler);
 console.log(newCoursesName.join(''));
 //<h2> Javascript </h2><h2> HTML, CSS 
 //</h2><h2> Ruby </h2><h2> PHP </h2><h2> ReactJS </h2><h2> Ruby </h2>
+
+
+//---------------------------------------------------------------------------------------
 console.warn("reduce");
 //1. Dễ hiểu:
 //2: Ngắn gọn:
@@ -154,7 +157,64 @@ function sumCoinHandler(accumulator, currentValue, currentIndex, originArray) {
 var sumCoin = courses.reduce(sumCoinHandler, 0);
 console.log(sumCoin);
 
-var tong = courses.reduce(function (accumulator, currentValue) {
+var totalCoinOfCourse = courses.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.coin;
-}, 0);
-console.log(tong);
+}, 0); //gia tri khoi tao bang 0 - initial value
+console.log(totalCoinOfCourse);
+
+var numbers = [100, 200, 220, 200, 480];
+var totalNumber = numbers.reduce(function (total, number) {
+    return total + number;
+}, 0); //khong can initial value vi so dau tien la number
+console.log(totalNumber);
+
+//Flat  - "làm phẳng" mảng từ depth array - "mảng sâu"
+var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+
+var flatArray = depthArray.reduce(function (flatOutput, depthItem) {
+    return flatOutput.concat(depthItem);
+}, []);
+console.log(flatArray)
+//Lấy ra các khóa học đưa vào 1 mảng mới
+var topics = [
+    {
+        topic: "Front-end",
+        courses: [
+            {
+                id: 1,
+                title: "HTML - CSS"
+            },
+            {
+                id: 2,
+                title: "JVS"
+            }
+        ]
+    }, {
+        topic: "Back-end",
+        courses: [
+            {
+                id: 1,
+                title: "PHP"
+            },
+            {
+                id: 2,
+                title: "ruby"
+            }
+        ]
+    },
+]
+
+var newCoursesss = topics.reduce(function (courses, topic) {
+    return courses.concat(topic.courses);
+}, []);
+console.log(newCoursesss);
+
+var htmls = newCoursesss.map(function (course) {
+    return `
+    <div>   
+        <h2> title: ${course.title} </h2>
+        <p> id: ${course.id} </p>
+    </div>`;
+});
+console.log(htmls.join(""))
+
