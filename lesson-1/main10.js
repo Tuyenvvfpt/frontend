@@ -29,6 +29,9 @@ for (var key in myLanguage) {
     console.log(myLanguage[key]); //khac nhau o day
 }
 
+for (const key in myInfor) {
+    console.log(`${key}: ${myInfor[key]}`);
+}
 /* for/of loop */
 
 console.warn("for of");
@@ -43,6 +46,14 @@ var myIf = {
     age: 18,
     address: "HN",
 }
+/* demo for of with object */
+// for(var k of myInfor){
+//     console.log(k); 
+// }
+for (const [key, value] of Object.entries(myIf)) {
+    console.log(`${key}: ${value}`);
+}
+//-----------------------------------------------
 console.error("Object.keys")
 for (var key of Object.keys(myIf)) {
     console.log(key);
@@ -90,12 +101,12 @@ for (var a = 0; a < 10; a++) {
     a++;
 }
 
-/* nested loop - vong lap long nhau */
-console.warn("nested loop")
-var myA = [[1, 2], [3, 4], [5, 6]];
+// /* nested loop - vong lap long nhau */
+// console.warn("nested loop")
+// var myA = [[1, 2], [3, 4], [5, 6]];
 
-for (var i = 0; i < myA.length; i++) {
-    for (var j = 0; i < myA[i].length; j++) {
-        console.log(myA[i][j]);
-    }
-}
+// for (var i = 0; i < myA.length; i++) {
+//     for (var j = 0; i < myA[i].length; j++) {
+//         console.log(myA[i][j]);
+//     }
+// }
