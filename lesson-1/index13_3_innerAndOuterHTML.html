@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML and OuterHTML</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- innerHTML -->
+    <div class="box">
+
+    </div>
+
+
+    <hr>
+
+    <!-- outterHTML -->
+    <div class="boxx">
+        <h3 title="heading2"> this is a heading</h3>
+    </div>
+
+    <hr>
+
+    <!-- node properties -->
+    <div class="boxxx" contenteditable="">
+        <h3 title="heading3"> this is a heading node properties </h3>
+    </div>
+
+    <hr>
+
+    <!-- dom css & class property-->
+    <div class="boxxxx box-2">
+        <h4> class property</h4>
+    </div>
+
+    <hr>
+
+    <!-- dom events -->
+    <div>
+        <!-- <h5 onclick="console.log(Math.random())"> dom events
+            - random number </h5> -->
+        <h5 onclick="console.log(this.innerText)">dom events - outside
+            <br> <span onclick="console.log(this.innerText)"> dom events
+                - innerText </span>
+            <!-- sự kiển nổi bọt -->
+        </h5>
+
+        <h6>
+            <span> DOM EVENTS - gen number 1</span>
+        </h6>
+        <h6>
+            <span> DOM EVENTS - gen number 2</span>
+        </h6>
+    </div>
+</body>
+<!-- InnerHTML vs OuterHTML -->
+<script src="main13_3.js"></script>
+
+</html>
