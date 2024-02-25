@@ -314,3 +314,18 @@ function arrayLogger(...rest) { //kết hợp destructuring và định nghĩa t
 arrayLogger(...arrayDemo); //spread và truyền đối số và giải trong array/ object khác
 
 /* tagged template literals */
+function highlight([first, ...strings], ...values) {
+    // console.log("first: ", first); //hoc lap trinh
+    // console.log("strings: ", strings); //tai    !
+    // console.log("values: ", values); //f8 java
+    return values.reduce(
+        (acc, curr) => [...acc, `<span> ${curr}</span>`, strings.shift()],
+        [first]
+    ).join("");
+}
+var brand = "F8";
+var brandCourse = "Java";
+const html = highlight` Hoc lap trinh ${brandCourse} tai ${brand}!`;
+//từ biến thứ 2 sẽ là nội suy
+console.log(html);
+
