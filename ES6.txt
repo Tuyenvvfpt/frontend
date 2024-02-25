@@ -1,0 +1,4 @@
+- ECMA là một quy chuẩn được ra đời bởi tổ chức ECMA
+International. quy chuẩn được sinh ra để tạo ra tiêu chuẩn
+cho Javascript.
+- ES6 chưa được support trên tất cả trình duyệt
