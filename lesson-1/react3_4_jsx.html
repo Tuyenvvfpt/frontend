@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+JSX not is html code
+- tạo ra biến và gán
+- linh động, hỗ trợ việc viết code js vào giữa
+
+ -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // alert();
+
+        const reactCourse = "ReactJS F8";
+        const courses = [
+            {
+                name: "HTML",
+            }, {
+                name: "JS",
+            }, {
+                name: "React",
+            }
+        ]
+
+
+        const jsx =
+            <ul>
+                {courses.map(course =>
+                    <li> {course.name}   </li>
+                )}
+            </ul>
+
+        const ul =
+            <ul>
+                <li> Java</li>
+                <li> React</li>
+            </ul>
+
+        ReactDOM.render(jsx, document.getElementById("root"));
+    </script>
+</body>
+
+</html>

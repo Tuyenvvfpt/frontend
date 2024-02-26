@@ -193,10 +193,10 @@ var courseNew = {
 console.log(courseNew);
 console.log(courseNew.inTen());
 
-var fieldName = "nameeeee";
+var fieldName = "new nameeeee";
 var fieldPrice = "priceeee";
 const monHoc = {
-    [fieldName]: "Javavavavavava", //nameeeee
+    [fieldName]: "Javavavavavava", //new nameeeee
     [fieldPrice]: 101010101010101, //priceeee
 };
 console.log(monHoc);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React.createElement()</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+</head>
+
+<body>
+    <!-- 
+    1. React.createElement() -> React element
+    2. So sánh với document.createEmement() -> DOM element
+    3. Thay đổi: id, className, style, ...
+    4. Thêm: text, HTML
+    5. Tạo:
+    <h1  title =" Hello" class="heading"> Hello guys! </h1>
+    6. Tạo:
+    <ul>
+        <li>ReactJS</li>        
+        <li>Javascript</li>
+    </ul>
+ -->
+
+    <script>
+        //DOM
+        const h1DOM = document.createElement("h1");
+        h1DOM.innerText = "Hello guys!";
+        h1DOM.title = "hello";
+        h1DOM.className = "headingClass";
+        document.body.appendChild(h1DOM);
+
+        //React -> ReactDOM
+        //React.createElement(type, props, children, n)
+
+        const h1React = React.createElement("h1", {
+            title: "Hello",
+            className: "heading",
+        }, "Hello React");
+
+
+        // console.dir(h1DOM);
+        // console.log(h1React);
+
+        //DOM2
+        const ulDOM = document.createElement("ul");
+        ulDOM.id = "ul-id";
+        ulDOM.style = "color: red; font-size: 30px;"
+        const liDOM1 = document.createElement('li');
+        liDOM1.innerText = "Java";
+        liDOM1.id = "li-id-1";
+        const liDOM2 = document.createElement('li');
+        liDOM2.innerText = "React";
+        ulDOM.appendChild(liDOM1);
+        ulDOM.appendChild(liDOM2);
+        //React2
+        const ulReact = React.createElement(
+            "ul",
+            {
+                id: "ul-id",
+                color: "red",
+            },
+            React.createElement("li", {
+                id: "li-id-1"
+            }, "Java"),
+            React.createElement("li", null, "React"));
+        console.dir(ulDOM);
+        console.log(ulReact);
+    </script>
+</body>
+
+</html>

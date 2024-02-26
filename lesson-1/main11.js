@@ -115,7 +115,7 @@ function courseHandler(course, index, originArray) {
 }
 var newCourses = courses.map(courseHandler);
 //tao ra Array moi co SO LUONG PHAN TU = SO LUONG PHAN TU ARRAY BAN DAU
-console.log(newCourses);
+console.log(newCourses); //6~~~~~~
 
 
 function courseNameHandler(course) {

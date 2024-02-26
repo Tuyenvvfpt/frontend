@@ -47,6 +47,7 @@ fetch(postAPI)
 var courseApi = "http://localhost:3000/courses";
 fetch(courseApi)
     .then(function (response) {
+        // console.log(response);
         return response.json();
     })
     .then(function (courses) {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactDOM </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+
+    <!-- 1. Tại sao phải sử dụng React_DOM => render element ra browser
+    2. Tại sao lại tách React_DOM
+    3. Render UI 
+
+
+    React-Native -> iOS, Android
+-->
+    <div id="root"></div>
+    <script>
+        //React
+        const divReact = React.createElement(
+            "div",
+            {
+                className: "post-item",
+            },
+            React.createElement("h2", {
+                title: "Hoc React tai F8"
+            }, "Hoc ReactJS"),
+            React.createElement("p", {
+
+            }, "Hoc ReactJS tu co ban"));
+        console.dir(divReact);
+
+        //get root element
+        const root = document.getElementById("root");
+        const container = document.getElementById("root");
+
+
+        //ReactDOM -> render UI
+        // ReactDOM.render(divReact, root);
+
+        //React@18
+        const rootReact = ReactDOM.createRoot(container);
+        rootReact.render(divReact);
+    </script>
+</body>
+
+</html>
